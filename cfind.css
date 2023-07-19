@@ -1,0 +1,44 @@
+
+.container{
+  margin:0 auto;
+  background:#111f16;
+  padding:4px;
+  border-radius: 4px;
+  color:white;
+  text-align: center;
+  height:500px;
+  box-shadow: 4px 4px 2px grey;
+}
+
+table{
+  margin: 30px auto;
+}
+
+input{
+  padding:9px;
+  border-radius: 10px;
+  outline: none;
+  margin:10px 0;
+  font-weight: bold;
+}
+
+p::first-letter{
+  color:#ffef2588;
+  font-size: 45px;
+}
+p{
+  display: inline-block;
+}
+
+button{
+  padding:10px 16px;
+  border-radius: 6px;
+  outline: none;
+  color:red;
+  font-weight: bold;
+}
+
+
+
+
+
