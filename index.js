@@ -1,7 +1,7 @@
+var btn = document.querySelector("button")
+var refresh = document.querySelector(".refresh")
 
-var btn=document.querySelector("button")
-
-var girls=[
+var girls = [
   "",
   "Toshlima",
   "Trisha",
@@ -11,7 +11,7 @@ var girls=[
   "Mitfar",
   "Sanjana",
   "Sumaiya",
-  "Kunkum",
+  "Kumkum",
   "Rumaiya",
   "Nilima",
   "Pinky",
@@ -40,39 +40,42 @@ var girls=[
   "Lija akter",
   "Sormi datta",
   "Joyshree de"
-  ]
-var girlsLength=girls.length-1
+]
+var girlsLength = girls.length-1
 
 
-btn.addEventListener("click",find )
-function find(){
+btn.addEventListener("click", find)
+
+function find() {
   
-  var randomNumber=Math.floor(Math.random()*girlsLength+1)
-  
-  var msg=document.querySelector(".message")
-  var name=document.querySelector(".name")
-  var result=document.querySelector(".result")
+  var msg = document.querySelector(".message")
+  var name = document.querySelector(".name")
+  var result = document.querySelector(".result")
+  var randomNumber = Math.floor(Math.random()*girlsLength+1)
   
   if (name.value == "") {
     alert("Please enter your name.")
-  }
-  else if (name.value.length <= 3) {
+  } else if (name.value.length <= 3) {
     alert("Must be 4 word")
-  }else{
-  
-  result.value="Finding please wait..."
-  btn.innerText="Finding..."
-  btn.style.color="green"
-  setTimeout(function() {
-    result.value=girls[randomNumber]
-    btn.innerText="Find Him"
-    btn.style.color="red"
-    msg.innerText="Take screenshot and share with your friends.no cheating mind it."
-  }, 3000);
+  } else {
+
+    result.value = "Finding please wait..."
+    btn.innerText = "Finding..."
+    btn.style.color = "green"
+    
+    setTimeout(function() {
+      result.value = girls[randomNumber]
+      btn.innerText = "Find Him"
+      btn.style.color = "red"
+      msg.innerText = "Take screenshot and share with your friends.no cheating mind it."
+      name.setAttribute("readonly",true)
+    }, 2000);
   }
   
-  
+  refresh.addEventListener("click",function(){
+  name.value=""
+  result.value=""
+  name.removeAttribute("readonly")
+})
+
 }
-
-
-
